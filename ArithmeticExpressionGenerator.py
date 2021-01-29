@@ -118,6 +118,9 @@ def main():
         expression = generate_expression(config)
         print(f'{expression}', file=fp)
 
+    if(fp not in [sys.stdout, sys.stderr]):
+        fp.close()
+
 
 if __name__ == '__main__':
     main()
